@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Jogo de Pedra, Papel e Tesoura contra o computador."
+    />
+    <title>Pedra-Papel-Tesoura</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="background-shape background-shape--one" aria-hidden="true"></div>
+    <div class="background-shape background-shape--two" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <header class="site-header">
+        <div class="brand-mark" aria-hidden="true">✂</div>
+        <div>
+          <h1>Pedra-Papel-Tesoura</h1>
+        </div>
+      </header>
+
+      <section id="screen-start" class="screen screen--active" aria-labelledby="start-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Pedra · Papel · Tesoura</p>
+          <h2 id="start-title">Você consegue vencer a máquina?</h2>
+          <p>
+            Escolha seu gesto, acompanhe a jogada do computador e seja o
+            primeiro a alcançar 3 pontos.
+          </p>
+        </div>
+
+        <div class="gesture-preview" aria-hidden="true">
+          <span>✊</span>
+          <span>✋</span>
+          <span>✌</span>
+        </div>
+
+        <div class="rules-card">
+          <div class="rules-card__icon" aria-hidden="true">?</div>
+          <div>
+            <strong>Regras do jogo</strong>
+            <p>Pedra vence tesoura, tesoura vence papel e papel vence pedra.</p>
+          </div>
+        </div>
+
+        <button id="start-button" class="button button--primary" type="button">
+          Começar jogo <span aria-hidden="true">→</span>
+        </button>
+      </section>
+
+      <section id="screen-game" class="screen" aria-labelledby="game-title" hidden>
+        <div class="screen-heading">
+          <div>
+            <p class="eyebrow">Partida em andamento</p>
+            <h2 id="game-title" tabindex="-1">Faça sua escolha</h2>
+          </div>
+          <div class="round-pill" aria-live="polite">
+            RODADA <strong id="round-number">1</strong>/5
+          </div>
+        </div>
+
+        <div class="scoreboard" aria-label="Placar da partida">
+          <div class="score-card score-card--player">
+            <span class="score-card__label">Você</span>
+            <strong id="player-score">0</strong>
+            <span class="score-card__caption">vitórias</span>
+          </div>
+          <div class="score-divider" aria-hidden="true">×</div>
+          <div class="score-card score-card--computer">
+            <span class="score-card__label">Máquina</span>
+            <strong id="computer-score">0</strong>
+            <span class="score-card__caption">vitórias</span>
+          </div>
+        </div>
+
+        <div class="matchup" aria-live="polite" aria-atomic="true">
+          <div class="choice-display choice-display--player">
+            <span id="player-choice-icon" class="choice-display__icon" aria-hidden="true">?</span>
+            <span class="choice-display__label">Sua escolha</span>
+          </div>
+          <span class="matchup__versus" aria-hidden="true">VS</span>
+          <div class="choice-display choice-display--computer">
+            <span id="computer-choice-icon" class="choice-display__icon" aria-hidden="true">?</span>
+            <span class="choice-display__label">Computador</span>
+          </div>
+        </div>
+
+        <div>
+          <p id="round-message" class="status-message" role="status">
+            Escolha um gesto para jogar.
+          </p>
+        </div>
+
+        <div class="choice-buttons" aria-label="Escolha seu gesto">
+          <button class="choice-button" type="button" data-choice="pedra">
+            <span class="choice-button__icon" aria-hidden="true">✊</span>
+            <span>Pedra</span>
+          </button>
+          <button class="choice-button" type="button" data-choice="papel">
+            <span class="choice-button__icon" aria-hidden="true">✋</span>
+            <span>Papel</span>
+          </button>
+          <button class="choice-button" type="button" data-choice="tesoura">
+            <span class="choice-button__icon" aria-hidden="true">✌</span>
+            <span>Tesoura</span>
+          </button>
+        </div>
+
+        <button id="restart-button" class="button button--secondary" type="button">
+          Reiniciar partida
+        </button>
+      </section>
+
+      <section id="screen-result" class="screen" aria-labelledby="result-title" hidden>
+        <div id="result-icon" class="result-icon" aria-hidden="true">🏆</div>
+        <p class="eyebrow">Partida encerrada</p>
+        <h2 id="result-title" tabindex="-1">Você venceu!</h2>
+        <p id="result-description" class="result-description">
+          Boa leitura da jogada. Esse duelo foi seu.
+        </p>
+
+        <div class="final-score" aria-label="Placar final">
+          <div>
+            <span>Você</span>
+            <strong id="final-player-score">0</strong>
+          </div>
+          <span aria-hidden="true">×</span>
+          <div>
+            <span>Máquina</span>
+            <strong id="final-computer-score">0</strong>
+          </div>
+        </div>
+
+        <button id="play-again-button" class="button button--primary" type="button">
+          Jogar novamente <span aria-hidden="true">↻</span>
+        </button>
+      </section>
+
+    </main>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
