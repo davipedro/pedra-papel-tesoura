@@ -3,6 +3,10 @@
 Jogo web de Pedra, Papel e Tesoura contra o computador, com visual inspirado
 em colagem e papel artesanal.
 
+## Versão publicada
+
+Disponível em: https://davipedro.github.io/pedra-papel-tesoura/
+
 ## Objetivo
 
 Ser o primeiro a conquistar três vitórias escolhendo o gesto que vence a jogada do computador.
@@ -50,10 +54,6 @@ js/game-rules.js Regras puras do jogo
 js/game-state.js Estado e reset da partida
 js/ui.js         Atualização da interface
 ```
-
-## Versão publicada
-
-Disponível em: `https://davipedro.github.io/pedra-papel-tesoura/`
 
 ## Informações da entrega
 
