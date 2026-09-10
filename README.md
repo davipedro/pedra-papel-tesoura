@@ -1,7 +1,6 @@
 # Pedra-Papel-Tesoura
 
-Jogo web de Pedra, Papel e Tesoura contra o computador, com visual inspirado
-em colagem e papel artesanal.
+Jogo web de Pedra, Papel e Tesoura contra o computador.
 
 ## Versão publicada
 
